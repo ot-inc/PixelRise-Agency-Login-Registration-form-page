@@ -1,0 +1,220 @@
+:root {
+    --bg-dark: #0f172a;
+    --bg-mid: #1f2937;
+    --gold: #f1b600;
+    --gold-strong: #ffca28;
+    --white: #ffffff;
+    --text-soft: #dfe6f3;
+    --danger: #ff4d67;
+    --success: #2dd4bf;
+    --warning: #fbbf24;
+    --shadow: rgba(0, 0, 0, 0.28);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background: linear-gradient(135deg, var(--bg-dark), var(--bg-mid), #3a2f00);
+    color: var(--white);
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+}
+
+.container {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+.card {
+    width: 100%;
+    max-width: 420px;
+    padding: 28px 20px;
+    background: rgba(255, 255, 255, 0.08);
+    backdrop-filter: blur(12px);
+    border: 1px solid rgba(255, 255, 255, 0.12);
+    border-radius: 24px;
+    box-shadow: 0 10px 30px var(--shadow);
+    text-align: center;
+}
+
+.brand-badge {
+    display: inline-block;
+    font-size: 0.75rem;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    margin-bottom: 12px;
+    padding: 8px 12px;
+    border-radius: 999px;
+    background: rgba(241, 182, 0, 0.12);
+    color: var(--gold-strong);
+    border: 1px solid rgba(241, 182, 0, 0.4);
+}
+
+h1 {
+    margin-bottom: 10px;
+    font-size: clamp(1.8rem, 3vw, 2.5rem);
+    line-height: 1.2;
+}
+
+.card p {
+    margin-bottom: 20px;
+    color: var(--text-soft);
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+.input-group {
+    text-align: left;
+}
+
+label {
+    display: block;
+    margin-bottom: 8px;
+    font-size: 0.9rem;
+    font-weight: 500;
+    color: var(--white);
+}
+
+input {
+    width: 100%;
+    padding: 14px 15px;
+    border-radius: 12px;
+    border: 1px solid rgba(255, 255, 255, 0.14);
+    background: rgba(15, 23, 42, 0.28);
+    color: var(--white);
+    outline: none;
+    font-size: 1rem;
+    transition: border-color 0.2s ease, box-shadow 0.2s ease, background 0.2s ease;
+}
+
+input::placeholder {
+    color: rgba(255, 255, 255, 0.6);
+}
+
+input:focus {
+    border-color: rgba(241, 182, 0, 0.9);
+    box-shadow: 0 0 0 3px rgba(241, 182, 0, 0.18);
+    background: rgba(15, 23, 42, 0.4);
+}
+
+input.input-error {
+    border-color: rgba(255, 77, 103, 0.8);
+    box-shadow: 0 0 0 3px rgba(255, 77, 103, 0.12);
+}
+
+.password-wrap {
+    position: relative;
+}
+
+.password-wrap input {
+    padding-right: 50px;
+}
+
+.toggle {
+    position: absolute;
+    right: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+    border: none;
+    background: transparent;
+    color: var(--gold-strong);
+    font-size: 1.1rem;
+    cursor: pointer;
+    padding: 8px;
+}
+
+.primary-btn {
+    width: 100%;
+    padding: 15px;
+    border: none;
+    border-radius: 12px;
+    background: linear-gradient(135deg, var(--gold), var(--gold-strong));
+    color: #171717;
+    font-size: 1rem;
+    font-weight: 700;
+    cursor: pointer;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+    box-shadow: 0 10px 20px rgba(241, 182, 0, 0.2);
+}
+
+.primary-btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 14px 25px rgba(241, 182, 0, 0.28);
+}
+
+.primary-btn:active {
+    transform: translateY(0);
+}
+
+.error-message {
+    display: block;
+    min-height: 18px;
+    margin-top: 6px;
+    font-size: 0.75rem;
+    color: #ffd6dc;
+}
+
+.strength-wrap {
+    margin-top: -4px;
+}
+
+.strength {
+    height: 10px;
+    border-radius: 999px;
+    overflow: hidden;
+    background: rgba(255, 255, 255, 0.12);
+    border: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.strengthBar {
+    width: 0;
+    height: 100%;
+    border-radius: inherit;
+    transition: width 0.3s ease, background 0.3s ease;
+    background: #ef4444;
+}
+
+.strength-text {
+    display: block;
+    margin-top: 8px;
+    font-size: 0.75rem;
+    color: var(--text-soft);
+}
+
+.button-text {
+    margin-top: 18px;
+    color: var(--text-soft);
+}
+
+.button-text a {
+    color: var(--gold-strong);
+    text-decoration: none;
+    font-weight: 700;
+}
+
+.button-text a:hover {
+    text-decoration: underline;
+}
+
+@media (min-width: 640px) {
+    .card {
+        padding: 36px 32px;
+    }
+
+    body {
+        padding: 32px;
+    }
+}

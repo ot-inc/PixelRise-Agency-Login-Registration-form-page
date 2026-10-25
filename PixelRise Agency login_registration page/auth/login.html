@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+        <title>Login | PixelRise Agency</title>
+
+        <link rel="stylesheet" href="auth.css">
+        <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    </head>
+
+    <body>
+        <div class="container">
+            <div class="card">
+                <div class="brand-badge">✨ PixelRise</div>
+                <h1>👋 Welcome Back</h1>
+                <p>🔐 Login to continue</p>
+
+                <form id="loginForm" novalidate>
+                    <div class="input-group">
+                        <label for="loginEmail">📧 Email Address</label>
+                        <input id="loginEmail" type="email" name="email" placeholder="you@example.com" required>
+                        <small class="error-message" aria-live="polite"></small>
+                    </div>
+
+                    <div class="input-group">
+                        <label for="loginPassword">🔒 Password</label>
+                        <div class="password-wrap">
+                            <input id="loginPassword" type="password" name="password" placeholder="Enter your password" required minlength="8">
+                            <button type="button" class="toggle" aria-label="Toggle password visibility" onclick="toggleLoginPassword()">👁️</button>
+                        </div>
+                        <small class="error-message" aria-live="polite"></small>
+                    </div>
+
+                    <button type="submit" class="primary-btn">✅ Login</button>
+                </form>
+
+                <p class="button-text">
+                    🆕 Don't have an account?
+                    <a href="register.html">Register</a>
+                </p>
+            </div>
+        </div>
+
+        <script src="auth.js"></script>
+    </body>
+</html>
