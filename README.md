@@ -109,13 +109,11 @@ JavaScript
 ```text
 pixelrise-login-system/
 │
-├── index.html
 │
 ├── login.html
 │
 ├── register.html
 │
-├── forgot-password.html
 │
 ├── css/
 │   └── style.css
